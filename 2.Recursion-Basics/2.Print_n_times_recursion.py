@@ -1,3 +1,5 @@
+#  Print "N" times recursively
+
 def func(i):
     if i < 1:
         return 
