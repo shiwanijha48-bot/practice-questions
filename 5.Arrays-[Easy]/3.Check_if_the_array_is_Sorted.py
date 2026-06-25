@@ -10,3 +10,5 @@ print(checksort(arr))
 arr1 = [1, 2, 3,4,5]
 print(checksort(arr1))
 
+#  Tc = o(n)
+#  sc = o(1)
