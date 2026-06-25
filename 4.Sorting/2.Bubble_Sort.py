@@ -1,3 +1,4 @@
+#  Bubble sort = adjacent swaps
 #  method - 1
 def bubble_sort(nums):
     n = len(nums)
@@ -24,5 +25,6 @@ def bubble(nums):
 num = [6, 9, 88, 2, 3 , 1, 77, 43, 90]
 print(bubble(num))
 
-# TC = O(N)
+# TC = O(N**2)
+# Tc = o(n) for best case when al the elements are sorted..
 #  SC = O(1)
