@@ -1,10 +1,11 @@
 nums = [2, 3, 5, 89 ,6]
-x = 6
+x = 60
 for i in range(0, len(nums)):
     if nums[i] == x:
         print(i)
+else:
     print("-1")
-
+print("--------------------------------")
 
 def linearSearch(n, num, arr):
     for i in range(0, len(arr)):
