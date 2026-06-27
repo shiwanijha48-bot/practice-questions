@@ -17,3 +17,20 @@ def func(nums):
     return res
 print(func(arr))
 #  TC = O(N), SC = O(N)
+
+#  Method - 2
+def Solve(nums):
+    n = len(nums)
+    res = [0]*n
+    pos_index, neg_index = 0, 1
+    for i in range(0, n):
+        if nums[i]>= 0:
+            res[pos_index] = nums[i]
+            pos_index += 2
+        else:
+            res[neg_index] = nums[i]
+            neg_index += 2
+    return res
+
+print(Solve(arr))
+# TC= O(N), SC = O(1)
