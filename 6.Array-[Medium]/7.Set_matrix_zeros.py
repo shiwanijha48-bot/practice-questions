@@ -1,16 +1,18 @@
+matrix = [[7, 9, 2, 3], [20, 8, 0, 10], [29, 0, -10, 5] , [4, 14, 6, 7]]
+
 #  Method - 1
-class Solution:
-    def mark_infinity(self, matrix, row, col):
+
+def mark(matrix, row, col):
         r = len(matrix)
         c = len(matrix[0])
         for i in range(0, r):
             if matrix[i][col] != 0:
-                matrix[i][col] = float('inf')
+                matrix[i][col] = "#"
         for j in range(0, c):
             if matrix[row][j] != 0:
-                matrix[row][j] = float('inf')
+                matrix[row][j] = '#'
         
-    def setZeroes(self, matrix: List[List[int]]) -> None:
+def setZeroes(matrix):
         """
         Do not return anything, modify matrix in-place instead.
         """
@@ -19,15 +21,15 @@ class Solution:
         for i in range(0, r):
             for j in range(0, c):
                 if matrix[i][j] == 0:
-                    self.mark_infinity(matrix, i, j)
+                    mark(matrix, i, j)
         for i in range(0, r):
             for j in range(0, c):
-                if matrix[i][j] == float('inf'):
+                if matrix[i][j] == "#":
                     matrix[i][j] = 0
+        return matrix
 
 #  Method - 2
-class Solution:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
+def SetZeroes(matrix):
         """
         Do not return anything, modify matrix in-place instead.
         """
@@ -46,3 +48,7 @@ class Solution:
             for j in range(0, c):
                 if rowTrack[i] == -1 or colTrack[j] == -1:
                     matrix[i][j] = 0
+        return matrix
+
+print(setZeroes(matrix))
+# print(SetZeroes(matrix))
