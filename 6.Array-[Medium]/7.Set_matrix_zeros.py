@@ -10,8 +10,7 @@ def mark(matrix, row, col):
                 matrix[i][col] = "#"
         for j in range(0, c):
             if matrix[row][j] != 0:
-                matrix[row][j] = '#'
-        
+                matrix[row][j] = '#'    
 def setZeroes(matrix):
         """
         Do not return anything, modify matrix in-place instead.
@@ -27,6 +26,9 @@ def setZeroes(matrix):
                 if matrix[i][j] == "#":
                     matrix[i][j] = 0
         return matrix
+
+#  TC = O(n+m)*(n*m) + o(n*m)
+
 
 #  Method - 2
 def SetZeroes(matrix):
@@ -49,6 +51,8 @@ def SetZeroes(matrix):
                 if rowTrack[i] == -1 or colTrack[j] == -1:
                     matrix[i][j] = 0
         return matrix
+#  Tc = o(N*M) + O(N*M) == o(n*m)
+#  Sc = o(n+m)
 
-print(setZeroes(matrix))
-# print(SetZeroes(matrix))
+# print(setZeroes(matrix))
+print(SetZeroes(matrix))
