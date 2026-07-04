@@ -1,8 +1,7 @@
 nums = [1, 2, 3, 3, 3, 3, 3, 5, 6, 8, 9, 9, 10]
-target = 12 
+target = 3
 
 #  Method - 1
-
 def solve(nums, target):
     n = len(nums)
     first = -1
@@ -23,7 +22,7 @@ def lowerbound(nums, target):
     n = len(nums)
     low = 0
     high = n - 1
-    lb = n
+    lb = -1
     while low <= high:
         mid = (low + high)//2
         if nums[mid] >= target:
@@ -51,8 +50,9 @@ def upperbound(nums, target):
 lb = lowerbound(nums, target)
 if lb == -1:
     print(0)
-ub =  upperbound(nums, target)
-print(ub -lb)
+else:
+    ub =  upperbound(nums, target)
+    print(ub -lb)
 
 #  Tc = o(logn)
 
