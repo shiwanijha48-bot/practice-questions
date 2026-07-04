@@ -25,3 +25,4 @@ def Solve(nums):
             l = mid + 1
     return mini
 print(Solve(nums))
+

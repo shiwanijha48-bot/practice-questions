@@ -43,3 +43,25 @@ def Solve(nums, target):
 print(Solve(nums, target2))
 
 #  TC = O(log n) , SC = O(1)
+
+
+#  Method - 3 [Code and debug vala]
+def search(nums, target):
+        n = len(nums)
+        l = 0
+        r = n - 1
+        while l <= r:
+            mid = (l + r)//2
+            if nums[mid] == target:
+                return mid
+            if nums[mid] <= nums[r]:
+                if nums[mid] <= target <= nums[r]:
+                    l = mid + 1
+                else:
+                    r = mid - 1
+            else:
+                if nums[l] <= target <= nums[r]:
+                    r = mid - 1
+                else:
+                    l = mid + 1
+        return -1
