@@ -42,5 +42,3 @@ def func(head):
     return slow
 mid = func(head)
 print(mid.val)
-
-
