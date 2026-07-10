@@ -23,3 +23,4 @@ def func(head):
                     fast = fast.next
                 return slow
         return None
+#  TC = O(N), SC = O(1)
