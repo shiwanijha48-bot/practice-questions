@@ -16,56 +16,6 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
     
-# -------Delete codes -----------
-    def delete_head(self):
-        if not self.head:
-            print("DLL is empty")
-            return
-        if self.head.next is None:
-            self.head = None
-            return
-        self.head = self.head.next
-        self.head.prev = None
-
-# TC = O(1), SC = O(1)
-    
-    def delete_last(self):
-        if not self.head:
-            print("DLL is empty")
-            return
-        if self.head.next is None:
-            self.head = None
-            return
-        curr = self.head
-        while curr.next:
-            curr = curr.next
-        curr.prev.next = None
-
-# TC = O(N), SC = O(1)
-
-    def delete_at(self, position):
-        if not self.head:
-            print("DLL is empty")
-            return
-        if position == 0:
-            self.delete_head()
-            return
-        curr = self.head
-        count = 0
-        while curr and count < position:
-            curr = curr.next
-            count += 1
-        if curr is None:
-            print("Position out of bound")
-            return
-        if curr.next:
-            curr.next.prev = curr.prev
-        if curr.prev:
-            curr.prev.next = curr.next
-
-# TC = O(N), SC = O(1)
-
-
     def insert_at_head(self, val):
         new_node = Node(val)
         if not self.head :
