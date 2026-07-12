@@ -43,3 +43,16 @@ x = 13 << 1
 1101 = 11010: 26
 '''
 # not = ~ = flip and check -ve if -ve: 2s complemneeh, no, then stop
+
+
+# Introduction to Bit Manipulation
+
+n = 10  # 1010
+
+print("Number:", n)
+print("Binary:", bin(n))
+print("AND with 5:", n & 5)
+print("OR with 5:", n | 5)
+print("XOR with 5:", n ^ 5)
+print("Left Shift by 1:", n << 1)
+print("Right Shift by 1:", n >> 1)
