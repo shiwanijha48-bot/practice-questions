@@ -1,17 +1,17 @@
-def solve(index, total, subset):
-    if total == target:
-        result.append(subset.copy())
-        return
-    elif total > target:
-        return
-    if index >= len(nums):
-        return
-    subset.append(nums[index])
-    sum = total + nums[index]
-    solve(index + 1, sum, subset)
-    e = subset.pop()
-    sum = sum - e
-    solve(index + 1, sum, subset)
+# def solve(index, total, subset):
+#     if total == target:
+#         result.append(subset.copy())
+#         return
+#     elif total > target:
+#         return
+#     if index >= len(nums):
+#         return
+#     subset.append(nums[index])
+#     sum = total + nums[index]
+#     solve(index + 1, sum, subset)
+#     e = subset.pop()
+#     sum = sum - e
+#     solve(index + 1, sum, subset)
 
 
 #  method 
