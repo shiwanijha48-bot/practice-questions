@@ -14,7 +14,7 @@ class Solution:
         brackets[index] = ")"
         sum = total -1
         self.solve(index+1, sum, brackets, result)
-    def generateParenthesis(self, n: int) -> List[str]:
+    def generateParenthesis(self, n: int):
         brackets = [""]*(n*2)
         result = []
         self.solve(0,0,brackets,result)
