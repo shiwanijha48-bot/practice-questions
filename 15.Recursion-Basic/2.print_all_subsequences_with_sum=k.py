@@ -14,8 +14,8 @@ def solve(index, total, subset):
     solve(index + 1, sum, subset)
 
 
-    #  method 
-    from typing import List
+#  method 
+from typing import List
 
 def backtrack(subset: List[int], index: int, total: int):
     # Base case: If sum equals K, add a copy of the subset to result
