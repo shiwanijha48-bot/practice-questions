@@ -1,3 +1,5 @@
+target = 7
+
 class Solution:
     def backtrack(self, subset, index, target, result, candidates):
         if target == 0:
@@ -14,7 +16,7 @@ class Solution:
         target += candidates[index]
         self.backtrack(subset, index + 1, target, result, candidates)
             
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates):
         candidates.sort()
         result = set()
         self.backtrack([], 0, target,  result, candidates)
@@ -37,7 +39,7 @@ class Solution:
             self.backtrack(subset, i + 1, target - candidates[i], result, candidates)
             subset.pop()
 
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates):
         candidates.sort()  # Sort to enable duplicate skipping and early termination
         result = []
         self.backtrack([], 0, target, result, candidates)
