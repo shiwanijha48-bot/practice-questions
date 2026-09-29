@@ -13,6 +13,7 @@ def func(s):
     return res
 
 
+
 s = "(()())(())"
 print(func(s))
 
