@@ -5,4 +5,3 @@ class Solution:
         words.reverse()
         result = " ".join(words)
         return result
-
