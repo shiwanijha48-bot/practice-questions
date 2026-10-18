@@ -16,8 +16,6 @@ class Solution:
             else:
                 mapping_ttos[char_t] = char_s
         return True
-
-
 '''
 205. Isomorphic Strings
 Solved
