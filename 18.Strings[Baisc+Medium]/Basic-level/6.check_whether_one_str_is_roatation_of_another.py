@@ -6,9 +6,6 @@ class Solution:
         if goal in double_s:
             return True
         return False
-
-
-
 '''
 796. Rotate String
 Solved
