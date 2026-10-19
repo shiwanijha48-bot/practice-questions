@@ -8,7 +8,6 @@ class Solution:
         for ch,freq in sorted_chars:
             result = result + (ch*freq)
         return result
-
 '''
 451. Sort Characters By Frequency
 Solved
